@@ -1,12 +1,12 @@
 {
-  "name": "brei-gulp",
+  "name": "gulp-project",
   "version": "1.0.0",
   "description": "None",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Sean T. Stacho <stsstobx@gmail.com>",
+  "author": "Sean T. Stacho",
   "license": "ISC",
   "devDependencies": {
     "assemble": "^0.24.3",

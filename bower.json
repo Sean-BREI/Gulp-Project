@@ -1,9 +1,9 @@
 {
-  "name": "brei-gulp",
+  "name": "gulp-project",
   "description": "None",
   "main": "index.js",
   "authors": [
-    "Sean T. Stacho <stsstobx@gmail.com>"
+    "Sean T. Stacho"
   ],
   "license": "ISC",
   "homepage": "",
