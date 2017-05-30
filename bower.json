@@ -1,0 +1,20 @@
+{
+  "name": "brei-gulp",
+  "description": "None",
+  "main": "index.js",
+  "authors": [
+    "Sean T. Stacho <stsstobx@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "foundation-sites": "^6.3.1"
+  }
+}
