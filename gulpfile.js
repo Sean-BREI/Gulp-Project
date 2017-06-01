@@ -16,6 +16,7 @@ var getTask = function getTask(task) {
 };
 
 // Tasks
+gulp.task('clean:dist', getTask('clean'));
 gulp.task('assemble-load', getTask('assemble-load'));
 gulp.task('assemble', getTask('assemble'));
 gulp.task('compass', getTask('compass'));
@@ -23,6 +24,7 @@ gulp.task('postcss', getTask('postcss'));
 gulp.task('scripts', getTask('scripts'));
 
 gulp.task('build', [
+	'clean:dist',
 	'assemble-load',
 	'assemble',
 	'compass',
