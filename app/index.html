@@ -6,15 +6,19 @@
 <!--[if gt IE 9]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
 <head>
 
-    {{> _meta}}
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
 
     <title>Static Assets</title>
 
-    <meta name="description" content="" />
+    <meta name="description" content="">
 
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
-    {{> _css-main}}
+    <!-- build:css css/main.css -->
+    <link rel="stylesheet" href="css/main.css">
+    <!-- endbuild -->
 
     <style type="text/css">
         html, body { text-align: center; }
@@ -31,18 +35,31 @@
         .zebra-striping li a:hover { font-weight: bold; }
     </style>
 
-    {{> _js-modernizr}}
+    <!-- build:js js/plugins/modernizr.optimized.js -->
+    <script src="js/plugins/modernizr.js"></script>
+    <!-- endbuild -->
 
 </head>
 <body>
 
     <div class="container">
 
-        {% body %}
+        <h1>Project Name</h1>
+
 
     </div>
 
-    {{> _js-main}}
+    <!-- build:js js/lib/jquery.min.js -->
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <!-- endbuild -->
+    
+    <!-- build:js js/lib/foundation.min.js -->
+    <script src="bower_components/foundation-sites/dist/js/foundation.js"></script>
+    <!-- endbuild -->
+    
+    <!-- build:js js/main.min.js -->
+    <script src="js/main.js"></script>
+    <!-- endbuild -->
 
 </body>
 </html>

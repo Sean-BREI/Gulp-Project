@@ -1,10 +1,12 @@
 ---
+title: Project Name
 layout: index.hbs
 ---
 
-<h1>Project Name</h1>
+<h1>{{{ title }}}</h1>
 
-<h2>Templates</h2>
+{{!-- <h2>Templates</h2>
+
 <ul class="zebra-striping">
     {{#withSort template 'data.title'}}
 		{{#each this.pages }}
@@ -14,6 +16,7 @@ layout: index.hbs
 </ul>
 
 <h2>Modules</h2>
+
 <ul class="zebra-striping">
     {{#withSort module 'data.title'}}
 		{{#each this.pages }}
@@ -21,3 +24,4 @@ layout: index.hbs
 		{{/each}}
 	{{/withSort}}
 </ul>
+ --}}

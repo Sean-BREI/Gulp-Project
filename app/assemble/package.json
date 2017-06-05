@@ -1,6 +1,6 @@
 {
   "name": "brei-assemble-structure",
-  "version": "1.0.2",
+  "version": "1.0.0",
   "description": "Handlebar templates for BarkleyREI static websites",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

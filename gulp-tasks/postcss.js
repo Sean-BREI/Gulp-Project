@@ -1,8 +1,11 @@
 module.exports = function (gulp, plugins) {
+
 	return function () {
+
 		var autoprefixer = require('autoprefixer');
 		var cssnano = require('cssnano');
 		var stylelint = require('stylelint');
+
 		return gulp.src('./app/css/main.css')
 			.pipe(plugins.postcss([
 				stylelint({
@@ -25,6 +28,9 @@ module.exports = function (gulp, plugins) {
 			.pipe(plugins.rename({
 				suffix: '.min'
 			}))
-			.pipe(gulp.dest('./app/dist/css'));
+			.pipe(gulp.dest('./app/dist/css'))
+			.pipe(gulp.dest('./app/.tmp/css'));
+			
 	};
+
 };

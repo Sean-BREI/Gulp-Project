@@ -23,4 +23,4 @@ module.exports = {
 
 		return options.fn(fixture);
 	}
-};
+}

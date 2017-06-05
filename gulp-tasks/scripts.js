@@ -1,5 +1,7 @@
 module.exports = function (gulp, plugins) {
+
 	return function () {
+
 		return gulp.src('./app/js/*.js')
 			.pipe(plugins.foreach(function (stream, file) {
 				return stream
@@ -9,6 +11,9 @@ module.exports = function (gulp, plugins) {
 						suffix: '.min'
 					}));
 			}))
-			.pipe(gulp.dest('./app/dist/js'));
+			.pipe(gulp.dest('./app/dist/js'))
+			.pipe(gulp.dest('./app/.tmp/js'));
+
 	};
+	
 };

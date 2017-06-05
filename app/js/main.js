@@ -9,6 +9,7 @@ var BREI = {};
 
 		init: function () {
 			console.log('Initialized...');
+			console.log('Hello, BarkleyREI!');
 		}
 
 	};
