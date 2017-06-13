@@ -1,3 +1,11 @@
+/*
+ * Helper links
+ * https://github.com/assemble/assemble/tree/46a4fa8d362d0869ff8674f09e860f44d3fe8fae/support/docs/src/content/api
+ * https://github.com/assemble/gulp-assemble/issues/29
+ * https://github.com/assemble/assemble-core/issues/8
+ */
+
+
 module.exports = function (gulp, plugins) {
 
 	return function () {
@@ -8,8 +16,32 @@ module.exports = function (gulp, plugins) {
 			next();
 		});
 
+		gulp.assemble.preRender(/./, function (view, next) {
+			view.data.pages = gulp.assemble.views.pages;
+			next();
+		});	
+
+		gulp.assemble.helper('collection', function () {
+
+			// console.log(arguments);
+
+			var temp = {};
+			var type = arguments[0];
+			
+			for (var key in this.pages) {
+				if (this.pages.hasOwnProperty(key)) {
+					if (this.pages[key].data[type]) {
+						temp[key] = this.pages[key];
+					}
+				}
+			}
+		
+			return temp;
+		
+		});
+
 		// Options
-		gulp.assemble.options = {
+		gulp.assemble.options = {	
 			layoutdir: './app/assemble/layouts/',
 			layout: 'default.hbs',
 			collections: [
